@@ -51,7 +51,7 @@
                             <td><?= $pecah['academic_discipline'] ?></td>
                             <td><?= $pecah['keyword'] ?></td>
                             <td><?= $pecah['agencies'] ?></td>
-                            <td><?= $pecah['references'] ?></td>
+                            <td><?= $pecah['reference'] ?></td>
                             <td><?= $pecah['upload_sub'] ?></td>
                             <td><?= $pecah['upload_sup'] ?></td>
                         </tr>
