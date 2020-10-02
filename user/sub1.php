@@ -68,12 +68,12 @@
 
 <?php
 if (isset($_POST['save'])) {
-
+    
 $comment = $_POST['comment'];
 
 $koneksi->query("INSERT INTO tbl_submission (comment) VALUES ('$comment')");
-    echo "<script>
-comfirm('Are you sure for next step?')
+echo "<script>
+confirm('Are you sure for next step?')
 window.location='?page=user/sub2'
 </script>";
 
