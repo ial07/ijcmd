@@ -7,6 +7,8 @@ This optional step allows Supplementary Files to be added to a submission. The f
 <br>
 <br>
 
+
+
 <table class="table table-bordered">
     <thead class="bg-dark text-white">
         <tr>
@@ -33,7 +35,26 @@ This optional step allows Supplementary Files to be added to a submission. The f
 
 <div class="card">
     <div class="card-header">Upload supplementary file</div>
+    <form action="?page=user/sub4" enctype="multipart/form-data" method="POST" onsubmit="return confirm('Do you really want to continue?');">
     <div class="card-body">
-        <input type="file" name="sub">
+        <input type="file" name="foto"> <br>
+
+        <button type="submit" name="savesub4" value="save" class="btn text-white" style="background-color:  #ff5821;">Save and Continue</button>
+
+        <button type="submit" name="savesub" value="save" class="btn text-white" style="background-color:  #ff5821;">Cancel</button>
     </div>
 </div>
+    </form>
+
+    <?php if (isset($_POST['savesub4'])) {
+                        $foto = $_FILES['foto']['name'];
+                        $lokasi = $_FILES['foto']['tmp_name'];
+
+                        move_uploaded_file($lokasi, "img/pict_submission" . $foto);
+
+                        $simpan = $koneksi->query("INSERT INTO tbl_submission (upload_sup) VALUES ('$foto')");
+                        echo "<script>
+                        window.location='?page=user/sub5'
+                        </script>";
+                    }
+                    ?>
