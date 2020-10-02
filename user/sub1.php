@@ -63,7 +63,7 @@
 </div>
 <br>
 
-<button type="submit" name="save" value="save" class="btn text-white" style="background-color:  #ff5821;">Save and Continue</button>
+<button type="submit" name="save" value="save" class="btn text-white" style="background-color:  #ff5821;"> Save and Continue</button>
 </form>
 
 <?php
@@ -75,7 +75,6 @@ $koneksi->query("INSERT INTO tbl_submission (comment) VALUES ('$comment')");
 echo "<script>
 window.location='?page=user/sub2'
 </script>";
-
 }
 
 ?>
