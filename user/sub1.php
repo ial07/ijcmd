@@ -4,7 +4,7 @@
     <div class="card-header">
         <h4>Submission Checklist</h4>
     </div>
-    <form action="" enctype="multipart/form-data" method="POST" onsubmit="return confirm('Do you really want to submit the form?');">
+    <form action="" enctype="multipart/form-data" method="POST" onsubmit="return confirm('Do you really want to continue?');">
     <div class="card-body">
         Indicate that this submission is ready to be considered by this journal by checking off the following (comments to the editor can be added below).
         <div class="entry-content">
@@ -57,7 +57,7 @@
         <div class="entry-content">
             Enter text (optional)
             <br>
-            <textarea name="" id="" cols="" rows=""></textarea>
+            <textarea name="comment" id="" cols="" rows=""></textarea>
         </div>
     </div>
 </div>

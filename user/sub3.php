@@ -47,20 +47,23 @@
                                     <br>
                                     <textarea name="affiliation" cols="30" rows="5"><?php echo $show['affiliation'] ?></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="">Country</label>
-                                    <input type="text" value="<?php echo $show['country'] ?>" class="form-control" name="country">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Bio Statement
-                                        (E.g., department and rank)</label>
-                                    <br>
-                                    <textarea name="bio_statement" cols="30" rows="5"><?php echo $show['bio_statement'] ?></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Google Analytics account number</label>
-                                    <br>
-                                    <input type="text" class="form-control" name="google_analytics">
+
+                            </div>
+                            <div class="card-body">
+                                <div class="entry-content">
+                                    
+                                        <div class="form-group">
+                                            <label for="">Title</label>
+                                            <input type="text" required class="form-control" name="title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">
+                                                Abstract
+                                            </label>
+                                            <br>
+                                            <textarea name="abstract" required cols="30" rows="5"></textarea>
+                                        </div>
+
                                 </div>
                         </div>
                     </div>
