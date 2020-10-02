@@ -4,7 +4,7 @@
     <div class="card-header">
         <h4>Submission Checklist</h4>
     </div>
-    <form action="" enctype="multipart/form-data" method="POST">
+    <form action="" enctype="multipart/form-data" method="POST" onsubmit="return confirm('Do you really want to submit the form?');">
     <div class="card-body">
         Indicate that this submission is ready to be considered by this journal by checking off the following (comments to the editor can be added below).
         <div class="entry-content">
@@ -73,7 +73,6 @@ $comment = $_POST['comment'];
 
 $koneksi->query("INSERT INTO tbl_submission (comment) VALUES ('$comment')");
 echo "<script>
-confirm('Are you sure for next step?')
 window.location='?page=user/sub2'
 </script>";
 
