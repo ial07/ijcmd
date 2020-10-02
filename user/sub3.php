@@ -77,14 +77,14 @@
                                     
                                         <div class="form-group">
                                             <label for="">Title</label>
-                                            <input type="text" class="form-control" name="title">
+                                            <input type="text" required class="form-control" name="title">
                                         </div>
                                         <div class="form-group">
                                             <label for="">
                                                 Abstract
                                             </label>
                                             <br>
-                                            <textarea name="abstract" cols="30" rows="5"></textarea>
+                                            <textarea name="abstract" required cols="30" rows="5"></textarea>
                                         </div>
                                 </div>
                             </div>
