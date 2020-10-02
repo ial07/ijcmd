@@ -1,7 +1,7 @@
 <h5>Step 2. Uploading the Submission</h5>
 <a href="?page=user/sub1"> 1. START<b> </a>-> 2. UPLOAD SUBMISSION </b> -> 3. ENTER METADATA -> 4. UPLOAD SUPLEMENTARY FILES -> 5. CONFIRMATION
 <div class="card">
-<form action="?page=user/sub2" enctype="multipart/form-data" method="POST">
+<form action="?page=user/sub2" enctype="multipart/form-data" method="POST" onsubmit="return confirm('Do you really want to continue?');">
     <div class="card-body">
         <h6 class="ml-3">To upload a manuscript to this journal, complete the following steps.</h6>
         <ol>
@@ -33,19 +33,8 @@
                         move_uploaded_file($lokasi, "img/pict_submission" . $foto);
 
                         $simpan = $koneksi->query("INSERT INTO tbl_submission (upload_sub) VALUES ('$foto')");
-
-                        if ($simpan == TRUE) {
-
-                            echo " <script>
-                            confirm('Are you sure you wish to continue?')
-
-                            alert(window.location='?page=user/sub3')
-                            </script>";
-                        } else {
-                            echo " <script>
-                            alert('')
-                            window.location='?page=user/sub2'
-                            </script>";
-                        }
+                        echo "<script>
+                        window.location='?page=user/sub3'
+                        </script>";
                     }
                     ?>
