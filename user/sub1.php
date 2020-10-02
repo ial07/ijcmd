@@ -4,7 +4,7 @@
     <div class="card-header">
         <h4>Submission Checklist</h4>
     </div>
-    <form action="" enctype="multipart/form-data" method="POST">
+    <form action="" enctype="multipart/form-data" method="POST" onSubmit="return confirm('Do you want to submit?') ">
     <div class="card-body">
         Indicate that this submission is ready to be considered by this journal by checking off the following (comments to the editor can be added below).
         <div class="entry-content">
@@ -63,7 +63,7 @@
 </div>
 <br>
 
-<button type="submit" name="save" value="save" class="btn text-white" style="background-color:  #ff5821;">Save and Continue</button>
+<button type="submit" name="save" value="save" class="btn text-white" style="background-color:  #ff5821;"> Save and Continue</button>
 </form>
 
 <?php
@@ -73,10 +73,8 @@ $comment = $_POST['comment'];
 
 $koneksi->query("INSERT INTO tbl_submission (comment) VALUES ('$comment')");
 echo "<script>
-confirm('Are you sure for next step?')
 window.location='?page=user/sub2'
 </script>";
-
 }
 
 ?>
